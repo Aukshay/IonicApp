@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-searchbar showCancelButton (ionInput)="filterList($event)"></ion-searchbar>
+
+  <div *ngFor="let item of goalList">
+    <ion-card class="card">
+        <img src="https://ucarecdn.com/{{ item.image }}/" />
+        <ion-card-header>
+          <ion-card-subtitle>{{item.author}}</ion-card-subtitle>
+          <ion-card-title>{{item.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{item.desc}}
+        </ion-card-content>
+      </ion-card>
+  </div>
+
+</ion-content>

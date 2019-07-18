@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>Recipes</ion-title>
+    <ion-buttons slot='primary'>
+      <ion-button (click)="goSearch()">
+        <ion-icon slot='icon-only' name='search'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content padding>
+  
+    <div *ngFor="let recipe of list">
+        <ion-card class="card">
+            <img src="https://ucarecdn.com/{{ recipe.image }}/" />
+            <ion-card-header>
+              <ion-card-subtitle>{{recipe.author}}</ion-card-subtitle>
+              <ion-card-title>{{recipe.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              {{recipe.desc}}
+            </ion-card-content>
+          </ion-card>
+      </div>
+</ion-content>

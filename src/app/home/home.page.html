@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Recipes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class='card'>
+    <ion-card-header>
+      <ion-card-title color="light">LOG IN</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-input placeholder="Email" [(ngModel)]="username" color="light"></ion-input>
+      <ion-input type = "Password" [(ngModel)]="password" placeholder="Password" color="light"></ion-input>
+      <ion-button expand="block" (click)="login()">Sign In</ion-button>
+      <ion-text color="light">
+          <p class="ion-text-center" >OR</p>
+      </ion-text>
+      <ion-button expand="block" (click)="gotoref()">Create Account</ion-button>
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>
